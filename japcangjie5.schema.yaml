@@ -1,0 +1,115 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  schema_id: japcangjie5
+  name: 和倉頡五代
+  version: "0.21"
+  author:
+    - Jordan Schneider (葉凱兒)
+  description: |
+    日本人向けの第五代倉頡輸入法。
+	平仮名も片仮名も漢字も入力出来る。
+  dependencies:
+    - cangjie5
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 文字, 英数 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ ，。, ，． ]
+  - name: extended_charset
+    states: [ 通用, 拡張 ]
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - script_translator
+    - reverse_lookup_translator
+    #- table_translator
+  filters:
+    - uniquifier
+
+speller:
+  alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_;'
+  delimiter: " '"
+  #max_code_length: 5  # 五碼頂字上屏
+  
+translator:
+  dictionary: kana
+  enable_completion: false
+  enable_user_dict: false
+  strict_spelling: true
+
+abc_segmentor:
+  extra_tags:
+    - reverse_lookup  # 與拼音（反查碼）混打
+
+reverse_lookup:
+  suffix: ";"
+  dictionary: cangjie5
+  enable_completion: false
+  enable_charset_filter: true
+  enable_sentence: true
+  enable_encoder: true
+  encode_commit_history: true
+  max_phrase_length: 5
+  preedit_format:
+    - xform/^([a-z]*);?$/$1｜\U$1\E/
+    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+  comment_format:
+    - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
+  disable_user_dict_for_patterns:
+    - "^z.*$"
+    - "^yyy.*$"
+
+simplifier:
+  tips: all  # 簡化字模式下提示對應的傳統漢字
+
+punctuator:
+  import_preset: default
+  full_shape: &symbols
+    '~': 〜
+    '.': {commit: 。 }
+    ',': {commit: 、 }
+    '/': ・
+    '=': [ ゝ, ゞ ]
+    '+': [ ヽ, ヾ ]
+  half_shape: *symbols
+
+key_binder:
+  bindings:
+    - when: always
+      accept: Shift+space
+      toggle: full_shape
+    - when: always
+      accept: Control+space
+      toggle: ascii_mode
+
+recognizer:
+  import_preset: default
+  patterns:
+    reverse_lookup: "[a-z]*;?$"
+	
+ascii_composer:
+  switch_key:
+    Caps_Lock: noop
+    Eisu_toggle: clear
