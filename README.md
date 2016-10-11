@@ -50,6 +50,13 @@ You can append a ; (semicolon) to the end of a code to give priority to 漢字.
 For example: 'a' + (Space) will output あ, but 'a' + ';' + (Space) will output 日. 
 
 ----------
+Thanks
+----------
+
+Big thanks to Iotem (https://github.com/lotem) for his work on the schema and dict to output kana, which I am using in this project.
+Also a big thanks to the RIME team (https://github.com/rime).
+
+----------
 Questions
 ----------
 
