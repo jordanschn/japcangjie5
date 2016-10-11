@@ -48,3 +48,10 @@ Priority is given to 仮名. If a code can represent a 仮名, that will be firs
 You can append a ; (semicolon) to the end of a code to give priority to 漢字.
 
 For example: 'a' + (Space) will output あ, but 'a' + ';' + (Space) will output 日. 
+
+----------
+Questions
+----------
+
+If you have any questions, feel free to email me at:
+jordanschn@outlook.com
