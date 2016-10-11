@@ -5,7 +5,7 @@ Cangjie for Japanese.
 How to install:
 ----------------
 
-Download and isntall RIME:
+Download and install RIME:
 http://rime.im/
 
 Go to %AppData%\Roaming\Rime.
