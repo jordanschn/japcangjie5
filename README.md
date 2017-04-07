@@ -1,4 +1,4 @@
-# japcangjie5
+# 和文倉頡 (japcangjie5)
 Cangjie for Japanese.
 
 ----------------
@@ -41,19 +41,25 @@ If you want to know more about Cangjie, you can read about it here:
 https://en.wikipedia.org/wiki/Cangjie_input_method
 
 There's a few quirks about the IME that you need to get used to:
+
 You type 仮名 using ローマ字. Use lower case for 平仮名; upper case for 片仮名.
 Use Shift + Space to type full width characters.
-Use Ctrl + Space to type the Latin alphabet (alphanumeric mode).
+Use Ctrl + Space to type the Latin alphabet (英数 mode). Pressing Ctrl + Space again will return you to 文字 mode.
 Priority is given to 仮名. If a code can represent a 仮名, that will be first on the candidate list, then any 漢字.
-You can append a ; (semicolon) to the end of a code to give priority to 漢字.
+You can append a ; (semicolon) to the beginning of a code to give priority to 漢字.
+For example: 'a' + (Space) will output あ, but ';' + 'a' + (Space) will output 日. 
 
-For example: 'a' + (Space) will output あ, but 'a' + ';' + (Space) will output 日. 
+Press = or + to type '々'.
+Press / to type '・'.
+Press , to type '、'.
+Press . to type '。'.
+
 
 ----------
 Thanks
 ----------
 
-Big thanks to Iotem (https://github.com/lotem) for his work on the schema and dict to output kana, which I am using in this project.
+Thanks to Iotem (https://github.com/lotem) for his work on the schema and dict to output kana, which I have edited to use in this project.
 Also a big thanks to the RIME team (https://github.com/rime).
 
 ----------
