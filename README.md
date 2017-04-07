@@ -46,7 +46,7 @@ You type 仮名 using ローマ字. Use lower case for 平仮名; upper case for
 Use Shift + Space to type full width characters. <br/>
 Use Ctrl + Space to type the Latin alphabet (英数 mode). Pressing Ctrl + Space again will return you to 文字 mode. <br/>
 Priority is given to 仮名. If a code can represent a 仮名, that will be first on the candidate list, then any 漢字. <br/>
-You can append a ; (semicolon) to the beginning of a code to give priority to 漢字. <br/>
+You can add a ; (semicolon) to the beginning of a code to give priority to 漢字. <br/>
 For example: 'a' + (Space) will output あ, but ';' + 'a' + (Space) will output 日. <br/>
 
 Press = or + to type '々' （同の字点）. <br/>
