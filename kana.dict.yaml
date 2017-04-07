@@ -2,14 +2,16 @@
 # encoding: utf-8
 #
 # kana - 假名
-#
+# 
+# Original version by:
 # polyhedron <biopolyhedron@gmail.com>
 # foodgen <chen.sst@gmail.com>
 #
+# Additions by jordanschn <jordanschn@outlook.com>
 
 ---
 name: kana
-version: "2014.05.11"
+version: "2017.04.01"
 sort: original
 use_preset_vocabulary: false
 ...
@@ -102,8 +104,12 @@ use_preset_vocabulary: false
 ざ	za
 シ	SI
 し	si
+シ	SHI
+し	shi
 ジ	ZI
 じ	zi
+ジ	JI
+じ	ji
 シャ	SYA
 しゃ	sya
 ジャ	ZYA
@@ -124,6 +130,22 @@ use_preset_vocabulary: false
 しょ	syo
 ジョ	ZYO
 じょ	zyo
+シャ	SHA
+しゃ	sha
+ジャ	JA
+じゃ	ja
+シュ	SHU
+しゅ	shu
+ジュ	JU
+じゅ	ju
+シェ	SHE
+しぇ	she
+ジェ	JE
+じぇ	je
+ショ	SHO
+しょ	sho
+ジョ	JO
+じょ	jo
 ス	SU
 す	su
 ズ	ZU
@@ -142,6 +164,8 @@ use_preset_vocabulary: false
 だ	da
 チ	TI
 ち	ti
+チ	CHI
+ち	chi
 ヂ	DI
 ぢ	di
 チャ	TYA
@@ -164,12 +188,28 @@ use_preset_vocabulary: false
 ちょ	tyo
 ヂョ	DYO
 ぢょ	dyo
+チャ	CHA
+ちゃ	cha
+チィ	CHI
+ちぃ	chi
+チュ	CHU
+ちゅ	chu
+チェ	CHE
+ちぇ	che
+チョ	CHO
+ちょ	cho
 ッ	XTU
 っ	xtu
+ッ	XTSU
+っ	xtsu
 ツ	TU
 つ	tu
+ツ	TSU
+つ	tsu
 ヅ	DU
 づ	du
+ヅ	DZU
+づ	dzu
 ッカ	KKA
 っか	kka
 ッガ	GGA
@@ -209,6 +249,17 @@ use_preset_vocabulary: false
 ッショ	SSYO
 っしょ	ssyo
 ッジョ	ZZYO
+ッシ	SSHI
+っし	sshi
+ッジ	JJI
+ッシャ	SSHA
+っしゃ	ssha
+ッジャ	JJA
+ッシュ	SSHU
+っしゅ	sshu
+ッショ	SSHO
+っしょ	ssho
+ッジョ	JJO
 ッス	SSU
 っす	ssu
 ッズ	ZZU
@@ -223,6 +274,8 @@ use_preset_vocabulary: false
 ッダ	DDA
 ッチ	TTI
 っち	tti
+ッチ	CCHI
+っち	cchi
 ッヂ	DDI
 ッチャ	TTYA
 っちゃ	ttya
@@ -236,6 +289,14 @@ use_preset_vocabulary: false
 ッツ	TTU
 っつ	ttu
 ッヅ	DDU
+ッチャ	CCHA
+っちゃ	ccha
+ッチュ	CCHU
+っちゅ	cchu
+ッチョ	CCHO
+っちょ	ccho
+ッツ	TTSU
+っつ	ttsu
 ッテ	TTE
 って	tte
 ッデ	DDE
@@ -263,6 +324,7 @@ use_preset_vocabulary: false
 ッピョ	PPYO
 っぴょ	ppyo
 ッフ	HHU
+ッフ	FFU
 ッブ	BBU
 ップ	PPU
 っぷ	ppu
@@ -362,6 +424,8 @@ use_preset_vocabulary: false
 ぴょ	pyo
 フ	HU
 ふ	hu
+フ	FU
+ふ	fu
 ブ	BU
 ぶ	bu
 プ	PU
@@ -434,6 +498,26 @@ use_preset_vocabulary: false
 れ	re
 ロ	RO
 ろ	ro
+ラ	RA
+ら	ra
+リ	LI
+り	li
+リャ	LYA
+りゃ	lya
+リィ	LYI
+りぃ	lyi
+リュ	LYU
+りゅ	lyu
+リェ	LYE
+りぇ	lye
+リョ	LYO
+りょ	lyo
+ル	LU
+る	lu
+レ	LE
+れ	le
+ロ	LO
+ろ	lo
 ヮ	XWA
 ゎ	xwa
 ワ	WA
@@ -450,4 +534,11 @@ use_preset_vocabulary: false
 ヺ	VO
 ン	N
 ん	n
+ン	NN
+ん	nn
+ン	M
+ん	m
+ン	MM
+ん	mm
 ー	-
+ー	_

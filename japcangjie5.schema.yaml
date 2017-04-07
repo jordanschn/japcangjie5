@@ -3,12 +3,12 @@
 
 schema:
   schema_id: japcangjie5
-  name: 和倉頡五代
+  name: 和文倉頡
   version: "0.21"
   author:
     - Jordan Schneider (葉凱兒)
   description: | 
-    日本人向けの第五代倉頡輸入法。
+    日本語をタイプできる第五版倉頡輸入力方式。
   dependencies:
     - cangjie5
 
@@ -50,8 +50,7 @@ engine:
 speller:
   alphabet: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_;'
   delimiter: " '"
-  #max_code_length: 5  # 五碼頂字上屏
-  
+ 
 translator:
   dictionary: kana
   enable_completion: false
@@ -63,17 +62,17 @@ abc_segmentor:
     - reverse_lookup  # 與拼音（反查碼）混打
 
 reverse_lookup:
-  suffix: ";"
+  prefix: ";"
   dictionary: cangjie5
   enable_completion: false
   enable_charset_filter: true
-  enable_sentence: true
+  enable_sentence: false
   enable_encoder: true
   encode_commit_history: true
   max_phrase_length: 5
   preedit_format:
-    - xform/^([a-z]*);?$/$1｜\U$1\E/
-    - "xlit|ABCDEFGHIJKLMNOPQRSTUVWXYZ|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
+    - xform/^(;?([a-z]*)$)$/$1｜\U$2\E/
+    - "xlit|;ABCDEFGHIJKLMNOPQRSTUVWXYZ|漢日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符|"
   comment_format:
     - "xlit|abcdefghijklmnopqrstuvwxyz~|日月金木水火土竹戈十大中一弓人心手口尸廿山女田難卜符～|"
   disable_user_dict_for_patterns:
@@ -90,8 +89,8 @@ punctuator:
     '.': {commit: 。 }
     ',': {commit: 、 }
     '/': ・
-    '=': [ ゝ, ゞ ]
-    '+': [ ヽ, ヾ ]
+    '=': [々, ゝ, ゞ ]
+    '+': [々, ヽ, ヾ ]
   half_shape: *symbols
 
 key_binder:
