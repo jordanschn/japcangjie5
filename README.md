@@ -40,6 +40,10 @@ If you want to know more about Cangjie, you can read about it here:
 
 https://en.wikipedia.org/wiki/Cangjie_input_method
 
+You can find the codes for characters here:
+
+http://www.chinesecj.com/cj5dict/
+
 There's a few quirks about the IME that you need to get used to:
 
 You type 仮名 using ローマ字. Use lower case for 平仮名; upper case for 片仮名. <br/>
