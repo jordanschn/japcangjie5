@@ -24,15 +24,15 @@ This is an IME (Input Method Editor) to create a shape-based input method Japane
 
 What do I mean by shaped-based input?
 
-Every button on the keyboard is mapped to a "shape":
-a = 日
-b = 月
-c = 金
+Every button on the keyboard is mapped to a "shape": <br/>
+a = 日 <br/>
+b = 月 <br/>
+c = 金 <br/>
 etc.
 
-To create characters, you simply decompose the shape of the character:
-晶 = 日 + 日 + 日 = aaa
-明 = 日 + 月 = ab
+To create characters, you simply decompose the shape of the character: <br/>
+晶 = 日 + 日 + 日 = aaa <br/>
+明 = 日 + 月 = ab 
 
 This has the benefit of forcing you to remember how to write characters, and you can write characters you know how to write, but not how to pronounce.
 
@@ -42,17 +42,17 @@ https://en.wikipedia.org/wiki/Cangjie_input_method
 
 There's a few quirks about the IME that you need to get used to:
 
-You type 仮名 using ローマ字. Use lower case for 平仮名; upper case for 片仮名.
-Use Shift + Space to type full width characters.
-Use Ctrl + Space to type the Latin alphabet (英数 mode). Pressing Ctrl + Space again will return you to 文字 mode.
-Priority is given to 仮名. If a code can represent a 仮名, that will be first on the candidate list, then any 漢字.
-You can append a ; (semicolon) to the beginning of a code to give priority to 漢字.
-For example: 'a' + (Space) will output あ, but ';' + 'a' + (Space) will output 日. 
+You type 仮名 using ローマ字. Use lower case for 平仮名; upper case for 片仮名. <br/>
+Use Shift + Space to type full width characters. <br/>
+Use Ctrl + Space to type the Latin alphabet (英数 mode). Pressing Ctrl + Space again will return you to 文字 mode. <br/>
+Priority is given to 仮名. If a code can represent a 仮名, that will be first on the candidate list, then any 漢字. <br/>
+You can append a ; (semicolon) to the beginning of a code to give priority to 漢字. <br/>
+For example: 'a' + (Space) will output あ, but ';' + 'a' + (Space) will output 日. <br/>
 
-Press = or + to type '々'.
-Press / to type '・'.
-Press , to type '、'.
-Press . to type '。'.
+Press = or + to type '々' （同の字点）. <br/>
+Press / to type '・' (中黒). <br/>
+Press , to type '、' (読点). <br/>
+Press . to type '。' (句点). <br/>
 
 
 ----------
