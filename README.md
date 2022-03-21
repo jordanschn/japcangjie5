@@ -65,10 +65,3 @@ Thanks
 
 Thanks to Iotem (https://github.com/lotem) for his work on the schema and dict to output kana, which I have edited to use in this project.
 Also a big thanks to the RIME team (https://github.com/rime).
-
-----------
-Questions
-----------
-
-If you have any questions, feel free to email me at:
-jordanschn@outlook.com
